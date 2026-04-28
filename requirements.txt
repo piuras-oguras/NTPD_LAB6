@@ -6,10 +6,15 @@ colorama==0.4.6
 fastapi==0.135.2
 h11==0.16.0
 idna==3.11
+iniconfig==2.3.0
 joblib==1.5.3
 numpy==2.4.3
+packaging==26.2
+pluggy==1.6.0
 pydantic==2.12.5
 pydantic_core==2.41.5
+Pygments==2.20.0
+pytest==9.0.3
 scikit-learn==1.8.0
 scipy==1.17.1
 starlette==1.0.0
