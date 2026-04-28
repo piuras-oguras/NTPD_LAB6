@@ -21,10 +21,13 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Ustawienie nazwy obrazu
+        run: |
+          echo "IMAGE_NAME=ghcr.io/${GITHUB_REPOSITORY,,}/iris-api:latest" >> $GITHUB_ENV
       - name: Budowanie obrazu
         run: |
-          docker build -t ghcr.io/${{ github.repository }}/iris-api:latest .
+          docker build -t $IMAGE_NAME .
 
       - name: Push obrazu
         run : |
-          docker push ghcr.io/${{ github.repository }}/iris-api:latest
+          docker push $IMAGE_NAME
